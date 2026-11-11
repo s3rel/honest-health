@@ -1,0 +1,54 @@
+{
+  "name": "honest-health",
+  "version": "0.1.0",
+  "description": "A health endpoint that does not lie: 503 on dependency failure, no secrets in the body, and a timezone check that catches silent ICU fallback.",
+  "keywords": [
+    "healthcheck",
+    "health",
+    "liveness",
+    "readiness",
+    "uptime",
+    "monitoring",
+    "observability",
+    "503",
+    "icu",
+    "timezone"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s3rel/honest-health.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s3rel/honest-health/issues"
+  },
+  "homepage": "https://github.com/s3rel/honest-health#readme"
+}
